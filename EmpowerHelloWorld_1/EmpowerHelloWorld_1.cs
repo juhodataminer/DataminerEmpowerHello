@@ -50,6 +50,7 @@ dd/mm/2023	1.0.0.1		XXX, Skyline	Initial version
 */
 
 using System.Linq;
+using Empower.Library.Room4;
 using Skyline.DataMiner.Core.DataMinerSystem.Automation;
 
 namespace EmpowerHelloWorld_1
@@ -67,14 +68,17 @@ namespace EmpowerHelloWorld_1
 		/// <param name="engine">Link with SLAutomation process.</param>
 		public void Run(IEngine engine)
 		{
-			var dms = engine.GetDms();
-			var elements = dms.GetElements().ToList();
-			foreach (var element in elements)
-			{
-				engine.GenerateInformation($"Element: {element.Name}");
-			}
-			engine.Log($"Heehaw from: {engine.InstanceId}:{engine.UserLoginName}");
-			engine.GenerateInformation($"Also tadaa: {engine.InstanceId}:{engine.UserLoginName}");
+			//var dms = engine.GetDms();
+			//var elements = dms.GetElements().ToList();
+			//foreach (var element in elements)
+			//{
+			//	engine.GenerateInformation($"Element: {element.Name}");
+			//}
+			//engine.Log($"Heehaw from: {engine.InstanceId}:{engine.UserLoginName}");
+			//engine.GenerateInformation($"Also tadaa: {engine.InstanceId}:{engine.UserLoginName}");
+
+			var order = OrderFactory.CreateOrder("Test order");
+			order.Dispatch("Juho Pentinmikko");
 		}
 	}
 }
