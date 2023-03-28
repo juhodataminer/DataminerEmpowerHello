@@ -76,7 +76,7 @@ namespace EmpowerHelloWorld_1
 			//}
 			//engine.Log($"Heehaw from: {engine.InstanceId}:{engine.UserLoginName}");
 			//engine.GenerateInformation($"Also tadaa: {engine.InstanceId}:{engine.UserLoginName}");
-
+			//
 			var order = OrderFactory.CreateOrder("Test order");
 			order.Dispatch("Juho Pentinmikko");
 		}
