@@ -64,6 +64,7 @@ namespace EmpowerHelloWorld_1
 		public void Run(IEngine engine)
 		{
 			engine.Log($"Heehaw from: {engine.InstanceId}:{engine.UserLoginName}");
+			engine.GenerateInformation($"Also tadaa: {engine.InstanceId}:{engine.UserLoginName}");
 		}
 	}
 }
