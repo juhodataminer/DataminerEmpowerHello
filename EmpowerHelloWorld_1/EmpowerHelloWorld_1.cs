@@ -51,12 +51,7 @@ dd/mm/2023	1.0.0.1		XXX, Skyline	Initial version
 
 namespace EmpowerHelloWorld_1
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Globalization;
-	using System.Text;
 	using Skyline.DataMiner.Automation;
-	
 	/// <summary>
 	/// Represents a DataMiner Automation script.
 	/// </summary>
@@ -68,7 +63,7 @@ namespace EmpowerHelloWorld_1
 		/// <param name="engine">Link with SLAutomation process.</param>
 		public void Run(IEngine engine)
 		{
-			
+			engine.Log($"Heehaw from: {engine.InstanceId}:{engine.UserLoginName}");
 		}
 	}
 }
